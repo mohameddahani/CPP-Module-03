@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:11:02 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/11 17:19:54 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/11 21:24:36 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 // ! Definitions of Orthodox Canonical Form, Member functions, and Setters, Getters
 
 // * Default constructor with initializer list
-ClapTrap::ClapTrap(std::string name): name(name){}
+ClapTrap::ClapTrap(std::string name): name(name), hitPoints(10),
+                    energyPoints(10), attackDamage(0){
+    std::cout << getName() << " is created" << std::endl; 
+}
 
 // * Copy constructor with initializer list
 ClapTrap::ClapTrap(const ClapTrap &other): name(other.name), hitPoints(other.hitPoints),
@@ -27,10 +30,14 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other){
     this->hitPoints = other.hitPoints;
     this->energyPoints = other.energyPoints;
     this->attackDamage = other.attackDamage;
+    
+    return *this;
 }
 
 // * Destructor
-ClapTrap::~ClapTrap(){}
+ClapTrap::~ClapTrap(){
+    std::cout << getName() << " is destroyed" << std::endl; 
+}
 
 // * Setters & Getters
 void ClapTrap::setName(const std::string value){
@@ -63,4 +70,52 @@ unsigned int ClapTrap::getEnergyPoints() const{
 
 unsigned int ClapTrap::getAttackDamage() const{
     return this->attackDamage;
+}
+
+// * Methods
+void ClapTrap::attack(const std::string &target){
+    if (getHitPoints() == 0){
+        std::cout << getName() << " can't attack because it's dead!" << std::endl;
+        return;
+    }
+    if (getEnergyPoints() == 0){
+        std::cout << getName() << " has no energy left to attack!" << std::endl;
+        return;
+    }
+    this->energyPoints--;
+    std::cout << getName() << " attacks " << target
+              << ", causing " << getAttackDamage() 
+              << " points of damage!" << std::endl;
+}
+
+void ClapTrap::takeDamage(unsigned int amount){
+    if (getHitPoints() == 0){
+        std::cout << getName() << " all ready dead" << std::endl;
+        return;
+    }
+    if (amount >= getHitPoints()){
+        this->hitPoints = 0;
+    } else {
+        this->hitPoints -= amount;
+    }
+    std::cout << getName() << " takes " << amount 
+              << " points of damage! Remaining HP: " 
+              << getHitPoints() << std::endl;
+}
+
+void ClapTrap::beRepaired(unsigned int amount){
+    if (getHitPoints() == 0){
+        std::cout << getName() << " can't repair because it's dead!" << std::endl;
+        return;
+    }
+    if (getEnergyPoints() == 0){
+        std::cout << getName() << " has no energy left to repair!" << std::endl;
+        return;
+    }
+    
+    this->energyPoints--;
+    this->hitPoints += amount;
+    
+    std::cout << getName() << " repairs itself, recovering "
+              << amount << " hit points! Current HP: " << getHitPoints() << std::endl;
 }
