@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 09:28:26 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 11:31:09 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/12 13:04:08 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ ScavTrap::ScavTrap(): ClapTrap("unknown"){
 }
 
 // * Parametrised constructor with initializer list
-ScavTrap::ScavTrap(std::string name): ClapTrap(name){
+ScavTrap::ScavTrap(std::string name){
     // ! You can't use an initializer list here because these members belong to ClapTrap, 
     // ! not to ScavTrap. ScavTrap only inherits them from the base class.
+    this->name = name;
     this->hitPoints = 100;
     this->energyPoints = 50;
     this->attackDamage = 20;
@@ -37,9 +38,10 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name){
 }
 
 // * Copy constructor with initializer list
-ScavTrap::ScavTrap(const ScavTrap &other): ClapTrap(other.name){
+ScavTrap::ScavTrap(const ScavTrap &other){
     // ! You can't use an initializer list here because these members belong to ClapTrap, 
     // ! not to ScavTrap. ScavTrap only inherits them from the base class.
+    this->name = other.name;
     this->hitPoints = other.hitPoints;
     this->energyPoints = other.energyPoints;
     this->attackDamage = other.attackDamage;
