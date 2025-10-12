@@ -6,11 +6,11 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:10:08 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 14:05:32 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/12 13:25:24 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(){
     ClapTrap playerOne("Bruno");
@@ -21,10 +21,10 @@ int main(){
     playerOne.beRepaired(12);
 
 
-    ScavTrap playerTwo("ilyas");
+    FragTrap playerTwo("ilyas");
     
     playerTwo.attack("Bruno");
     playerTwo.takeDamage(50);
     playerTwo.beRepaired(10);
-    playerTwo.guardGate();
+    playerTwo.highFivesGuys();
 }

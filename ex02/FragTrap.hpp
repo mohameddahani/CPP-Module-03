@@ -1,44 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/12 09:28:20 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 14:05:24 by mdahani          ###   ########.fr       */
+/*   Created: 2025/10/12 13:06:41 by mdahani           #+#    #+#             */
+/*   Updated: 2025/10/12 13:19:48 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 // * Includes
 #include <iostream>
 #include "ClapTrap.hpp"
 
 // * Class With Orthodox Canonical Form
-class ScavTrap: public ClapTrap{
+class FragTrap: public ClapTrap{
     // ! public
     public:
         // * Default constructor
-        ScavTrap();
+        FragTrap();
 
         // * Parametrised constructor
-        ScavTrap(const std::string name);
+        FragTrap(const std::string name);
 
         // * Copy constructor
-        ScavTrap(const ScavTrap &other);
+        FragTrap(const FragTrap &other);
 
         // * Copy assignment operator
-        ScavTrap &operator=(const ScavTrap &other);
+        FragTrap &operator=(const FragTrap &other);
 
         // * Destructor
-        ~ScavTrap();
+        ~FragTrap();
 
         // * Methods
-        void attack(const std::string &target);
-        void guardGate();
+        void highFivesGuys(void);
 };
 
 #endif
