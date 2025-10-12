@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/12 09:28:26 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 18:37:42 by mdahani          ###   ########.fr       */
+/*   Created: 2025/10/12 14:31:03 by mdahani           #+#    #+#             */
+/*   Updated: 2025/10/12 18:35:44 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 // ! Definitions of Orthodox Canonical Form, Member functions, and Setters, Getters
 
 // * Default constructor
-ScavTrap::ScavTrap(): ClapTrap("unknown"){
+DiamondTrap::DiamondTrap(): ClapTrap("unknown_clap_name"){
     // ! We use the initializer list only to call the ClapTrap constructor.
     // ! The inherited members (name, hitPoints, etc.) belong to ClapTrap,
-    // ! so we can’t initialize them directly here — only through the base constructor.
+    // ! so we can’t initialize them directly here — only through the base constructor..
     this->hitPoints = 100;
     this->energyPoints = 50;
-    this->attackDamage = 20;
+    this->attackDamage = 30;
 
     std::cout << "Default constructor called" << std::endl;
 }
 
 // * Parametrised constructor with initializer list
-ScavTrap::ScavTrap(std::string name): ClapTrap(name){
+DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"){
     this->hitPoints = 100;
-    this->energyPoints = 50;
-    this->attackDamage = 20;
+    this->energyPoints = 100;
+    this->attackDamage = 30;
 
-    std::cout << "ScavTrap " << getName() << " is created" << std::endl;
+    std::cout << "DiamondTrap " << getName() << " is created" << std::endl;
 }
 
 // * Copy constructor with initializer list
-ScavTrap::ScavTrap(const ScavTrap &other){
+DiamondTrap::DiamondTrap(const DiamondTrap &other){
     // ! The inherited members (name, hitPoints, etc.) belong to ClapTrap,
     // ! so we can’t initialize them directly here — only through the base constructor.
     this->name = other.name;
@@ -48,7 +48,7 @@ ScavTrap::ScavTrap(const ScavTrap &other){
 }
 
 // * Copy assignment operator
-ScavTrap &ScavTrap::operator=(const ScavTrap &other){
+DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other){
     this->name = other.name;
     this->hitPoints = other.hitPoints;
     this->energyPoints = other.energyPoints;
@@ -60,26 +60,8 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other){
 }
 
 // * Destructor
-ScavTrap::~ScavTrap(){
-    std::cout << "ScavTrap " << getName() << " is destroyed" << std::endl; 
+DiamondTrap::~DiamondTrap(){
+    std::cout << "DiamondTrap " << getName() << " is destroyed" << std::endl; 
 }
 
 // * Methods
-void ScavTrap::attack(const std::string &target){
-    if (getHitPoints() == 0){
-        std::cout << "ScavTrap " << getName() << " can't attack because it's dead!" << std::endl;
-        return;
-    }
-    if (getEnergyPoints() == 0){
-        std::cout << "ScavTrap " << getName() << " has no energy left to attack!" << std::endl;
-        return;
-    }
-    this->energyPoints--;
-    std::cout << "ScavTrap " << getName() << " attacks " << target
-              << ", causing " << getAttackDamage() 
-              << " points of damage!" << std::endl;
-}
-
-void ScavTrap::guardGate(){
-    std::cout << "ScavTrap " << getName() << " is now in Gate keeper mode" << std::endl;
-}

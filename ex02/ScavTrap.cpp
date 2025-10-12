@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 09:28:26 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 18:37:42 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/12 18:37:11 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name){
 
 // * Copy constructor with initializer list
 ScavTrap::ScavTrap(const ScavTrap &other){
-    // ! The inherited members (name, hitPoints, etc.) belong to ClapTrap,
-    // ! so we can’t initialize them directly here — only through the base constructor.
+    // ! You can't use an initializer list here because these members belong to ClapTrap, 
+    // ! not to ScavTrap. ScavTrap only inherits them from the base class.
     this->name = other.name;
     this->hitPoints = other.hitPoints;
     this->energyPoints = other.energyPoints;

@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 13:06:36 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 13:21:44 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/12 18:37:32 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 
 // * Default constructor
 FragTrap::FragTrap(): ClapTrap("unknown"){
-    // ! You can't use an initializer list here because these members belong to ClapTrap, 
-    // ! not to FragTrap. FragTrap only inherits them from the base class.
+    // ! We use the initializer list only to call the ClapTrap constructor.
+    // ! The inherited members (name, hitPoints, etc.) belong to ClapTrap,
+    // ! so we can’t initialize them directly here — only through the base constructor.
     this->hitPoints = 100;
     this->energyPoints = 100;
     this->attackDamage = 30;
@@ -26,10 +27,7 @@ FragTrap::FragTrap(): ClapTrap("unknown"){
 }
 
 // * Parametrised constructor with initializer list
-FragTrap::FragTrap(std::string name){
-    // ! You can't use an initializer list here because these members belong to ClapTrap, 
-    // ! not to FragTrap. FragTrap only inherits them from the base class.
-    this->name = name;
+FragTrap::FragTrap(std::string name): ClapTrap(name){
     this->hitPoints = 100;
     this->energyPoints = 100;
     this->attackDamage = 30;
@@ -39,8 +37,8 @@ FragTrap::FragTrap(std::string name){
 
 // * Copy constructor with initializer list
 FragTrap::FragTrap(const FragTrap &other){
-    // ! You can't use an initializer list here because these members belong to ClapTrap, 
-    // ! not to FragTrap. FragTrap only inherits them from the base class.
+    // ! The inherited members (name, hitPoints, etc.) belong to ClapTrap,
+    // ! so we can’t initialize them directly here — only through the base constructor.
     this->name = other.name;
     this->hitPoints = other.hitPoints;
     this->energyPoints = other.energyPoints;
