@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:10:45 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 10:55:17 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/12 10:55:02 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 // * Class With Orthodox Canonical Form
 class ClapTrap{
-    // ! private
-    private:
+    // ! protected
+    protected:
         std::string name;
         unsigned int hitPoints;
         unsigned int energyPoints;
