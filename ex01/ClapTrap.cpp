@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:11:02 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 14:20:03 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/12 19:07:29 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 // * Default constructor
 ClapTrap::ClapTrap(): name("unknown"), hitPoints(10),
         energyPoints(10), attackDamage(0){
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default constructor of ClapTrap is called" << std::endl;
 }
 
 // * Parametrised constructor with initializer list

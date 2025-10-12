@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 14:31:03 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 18:35:44 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/12 19:09:35 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ DiamondTrap::DiamondTrap(): ClapTrap("unknown_clap_name"){
     this->energyPoints = 50;
     this->attackDamage = 30;
 
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default constructor of DiamondTrap is called" << std::endl;
 }
 
 // * Parametrised constructor with initializer list

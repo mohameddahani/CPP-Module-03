@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:10:08 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 14:05:32 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/12 19:00:47 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main(){
     playerOne.takeDamage(2);
     playerOne.beRepaired(12);
 
+    std::cout << "==================================================================================" << std::endl;
 
     ScavTrap playerTwo("ilyas");
     

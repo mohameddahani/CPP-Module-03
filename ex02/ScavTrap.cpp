@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 09:28:26 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 18:37:11 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/12 19:08:43 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ScavTrap::ScavTrap(): ClapTrap("unknown"){
     this->energyPoints = 50;
     this->attackDamage = 20;
 
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default constructor of ScavTrap is called" << std::endl;
 }
 
 // * Parametrised constructor with initializer list

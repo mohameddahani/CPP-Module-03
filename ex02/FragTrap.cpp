@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 13:06:36 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 18:37:32 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/12 19:08:18 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ FragTrap::FragTrap(): ClapTrap("unknown"){
     this->energyPoints = 100;
     this->attackDamage = 30;
 
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default constructor of FragTrap is called" << std::endl;
 }
 
 // * Parametrised constructor with initializer list

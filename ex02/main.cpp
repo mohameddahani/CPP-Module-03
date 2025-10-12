@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:10:08 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 13:25:24 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/12 19:02:20 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main(){
     playerOne.takeDamage(2);
     playerOne.beRepaired(12);
 
+    std::cout << "==================================================================================" << std::endl;
 
     FragTrap playerTwo("ilyas");
     
