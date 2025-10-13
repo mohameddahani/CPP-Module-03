@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 14:30:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 17:17:46 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/13 10:33:57 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ class DiamondTrap: public ScavTrap, public FragTrap {
         ~DiamondTrap();
 
         // * Methods
+        using ScavTrap::attack;
+        void whoAmI();
 };
 
 #endif

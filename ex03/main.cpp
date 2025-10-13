@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:10:08 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 17:35:28 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/13 10:36:14 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,5 @@ int main(){
     playerFour.beRepaired(60);
     playerFour.guardGate();
     playerFour.highFivesGuys();
+    playerFour.whoAmI();
 }

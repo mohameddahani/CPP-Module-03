@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 14:31:03 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/12 19:09:35 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/13 10:38:23 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,3 +65,7 @@ DiamondTrap::~DiamondTrap(){
 }
 
 // * Methods
+void DiamondTrap::whoAmI(){
+    std::cout << "Name of DiamondTrap is " << getName() << std::endl;
+    std::cout << "Name of ClapTrap is " << ClapTrap::getName() << std::endl;
+}
