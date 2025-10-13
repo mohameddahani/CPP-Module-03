@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 14:31:03 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/13 10:38:23 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/13 18:40:00 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,9 @@ DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"){
 }
 
 // * Copy constructor with initializer list
-DiamondTrap::DiamondTrap(const DiamondTrap &other){
+DiamondTrap::DiamondTrap(const DiamondTrap &other): ClapTrap(other){
     // ! The inherited members (name, hitPoints, etc.) belong to ClapTrap,
     // ! so we can’t initialize them directly here — only through the base constructor.
-    this->name = other.name;
-    this->hitPoints = other.hitPoints;
-    this->energyPoints = other.energyPoints;
-    this->attackDamage = other.attackDamage;
 
     std::cout << "Copy constructor called" << std::endl;
 }
