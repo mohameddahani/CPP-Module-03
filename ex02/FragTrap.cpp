@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 13:06:36 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/13 18:38:53 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/13 18:47:10 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,13 @@ FragTrap::~FragTrap(){
 
 // * Methods
 void FragTrap::highFivesGuys(){
-    std::cout << "ScavTrap " << getName() << " requests a positive high five! 🙌" << std::endl;
+    if (getHitPoints() == 0){
+        std::cout << "FragTrap " << getName() << " can't do high fives because it's dead!" << std::endl;
+        return;
+    }
+    if (getEnergyPoints() == 0){
+        std::cout << "FragTrap " << getName() << " has no energy left to do high fives!" << std::endl;
+        return;
+    }
+    std::cout << "FragTrap " << getName() << " requests a positive high five! 🙌" << std::endl;
 }
